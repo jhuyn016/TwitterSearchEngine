@@ -12,12 +12,7 @@ class Listener(StreamListener):
 
     def on_data(self, data):
         try:
-<<<<<<< HEAD
-            data_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'data'))
-            data_path +="/"
-            with open(data_path + 'data_jay5.json', 'a') as f:
-                # data = json.dumps(data, ensure_ascii=False).encode("utf8")
-=======
+
             if self.outdir == None:
                 data_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'data'))
             else:
@@ -28,7 +23,6 @@ class Listener(StreamListener):
             filename = data_path +'data.json'
             print "opening file: ",filename
             with open(filename, 'a') as f:
->>>>>>> remotes/upstream/master
                 # Check if lang = 'en'
                 tweet = json.loads(data)
                 if tweet['lang'] == "en":
