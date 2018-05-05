@@ -20,7 +20,7 @@ class Listener(StreamListener):
             if data_path[-1] != "/":
                 data_path +="/"
 
-            filename = data_path +'data.json'
+            filename = data_path +'data_jay5.json'
             print "opening file: ",filename
             with open(filename, 'a') as f:
                 # Check if lang = 'en'
